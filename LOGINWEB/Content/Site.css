@@ -1,0 +1,67 @@
+﻿/* Contenedor principal del cuerpo */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end; /* Alineación a la derecha */
+    background-image: url('https://www.cdcuauhtemoc.tecnm.mx/wp-content/uploads/2021/08/LOGO-VERTICAL-TECNM.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: left center;
+    padding: 2%; /* Ajuste del relleno para mayor flexibilidad */
+    margin: 0;
+    transition: all 0.5s; /* Transición suave para cambios de tamaño */
+}
+
+/* Variables CSS */
+:root {
+    --distance-between: 300px; /* Ajusta la distancia según sea necesario */
+}
+
+/* Contenedor del formulario de inicio de sesión */
+.login-container {
+    align-items: flex-end;
+    max-width: 90%; /* Ancho máximo del 90% para mantener la flexibilidad */
+    padding: 2rem; /* Cambiado a unidades rem para mayor flexibilidad */
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    text-align: center;
+    background-color: midnightblue;
+    color: white;
+    margin-top: 5%;
+    margin-right: var(--distance-between); /* Ajuste de la distancia a la derecha */
+    transition: all 0.5s; /* Transición suave para cambios de tamaño */
+}
+
+/* Consulta de medios para pantallas más pequeñas */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 2% 2%; /* Ajuste del relleno para pantallas más pequeñas */
+    }
+
+    .login-container {
+        width: 90%;
+        max-width: 90%; /* Cambiado el ancho máximo para pantallas más pequeñas */
+        height: auto; /* Altura automática para mantener la proporción */
+        border-radius: 10px;
+        margin-top: 5%;
+        margin-right: 0; /* Eliminado el margen a la derecha en pantallas más pequeñas */
+    }
+}
+
+/* Consulta de medios para pantallas más grandes (cuando la imagen y el formulario deben reducirse) */
+@media screen and (min-width: 1200px) {
+    body {
+        padding: 2% 10%; /* Ajuste del relleno para pantallas más grandes */
+    }
+
+    .login-container {
+        width: 60%;
+        max-width: 400px; /* Reducción del ancho máximo */
+        height: auto; /* Altura automática para mantener la proporción */
+        margin-top: 5%;
+    }
+}
+
